@@ -7,7 +7,7 @@ const addUser=async(req,res)=>{
     
     try{
         res.header("Access-Control-Allow-Origin", "*")
-        
+
         const {username,password}=req.body
         if(username==null || password==null)return res.status(400).json({msg:"Falta el username/password"})
 
@@ -27,7 +27,7 @@ const addUser=async(req,res)=>{
 
 const userLogin=async(req,res)=>{
     try{
-        res.header("Access-Control-Allow-Origin", "*")
+        res.setHeader("Access-Control-Allow-Origin", "*")
         const {username,password}=req.body 
         if(username==null || password==null)return res.status(400).json({msg:"Falta el username/password"})
         
@@ -62,7 +62,7 @@ const addNewRecipe=async(req,res)=>{
 }
 
 const getRecipes=async(req,res)=>{
-    res.header("Access-Control-Allow-Origin", "*")
+    res.setHeader("Access-Control-Allow-Origin", "*")
     try{
         const recipes=await Recipe.find()
         if(!recipes)return res.status(400).json({msg:"La coleccion no existe o se encuentra vacia"})
