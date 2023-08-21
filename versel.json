@@ -1,12 +1,10 @@
 {
       "headers": [
         {
-          "key": "Access-Control-Allow-Origin"
-          "value": "*"
+         "Access-Control-Allow-Origin": "*"
         },
         {
-          "key": "Access-Control-Allow-Credentials",
-          "value": "true"
+          "Access-Control-Allow-Credentials": "true"
         }
       ]
 }
