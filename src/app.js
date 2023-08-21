@@ -6,12 +6,12 @@ const cors=require("cors")
 const router=require("./routes/route")
 const connectDB=require("./db/connection")
 
-// app.use((req, res, next) => {
-//   res.setHeader("Access-Control-Allow-Origin", "https://simple-mern-recetario-frontend.vercel.app");
-//   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-//   res.setHeader("Access-Control-Allow-Credentials", "true");
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+ });
 
 app.use(cors({
 origin: "https://recetario-frontend.vercel.app",
