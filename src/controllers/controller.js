@@ -7,7 +7,7 @@ const addUser=async(req,res)=>{
     
     try{
         res.header("Access-Control-Allow-Origin", "*")
-
+        
         const {username,password}=req.body
         if(username==null || password==null)return res.status(400).json({msg:"Falta el username/password"})
 
