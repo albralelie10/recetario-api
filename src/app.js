@@ -14,7 +14,7 @@ const connectDB=require("./db/connection")
 // });
 
 app.use(cors({
-origin: "",
+origin: "https://recetario-frontend.vercel.app",
 methods: ["GET", "POST", "PUT", "DELETE"],
 credentials: true
 }));
