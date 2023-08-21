@@ -1,4 +1,4 @@
-const express=require("express")
+Hconst express=require("express")
 const app=express()
 const PORT=3000 || process.env.PORT
 require("dotenv").config()
@@ -7,14 +7,14 @@ const router=require("./routes/route")
 const connectDB=require("./db/connection")
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://recetario-frontend.vercel.app");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.header("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
   next();
  });
 
 app.use(cors({
-origin: "https://recetario-frontend.vercel.app",
+origin: "*",
 methods: ["GET", "POST", "PUT", "DELETE"],
 credentials: true
 }));
