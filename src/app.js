@@ -9,7 +9,6 @@ const connectDB=require("./db/connection")
 
 app.use(cors({
   origin: "https://simple-mern-recetario-frontend.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
